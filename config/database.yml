@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: crazy_projects_development
+  pool: 5
+  username: postgres
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: crazy_projects_test
+  pool: 5
+  username: postgres
+  password:
+
+production:
+  adapter: postgresql
+  host: 
+  port: 5432
+  encoding: utf8
+  database: 
+  pool: 5
+  username: 
+  password: 
+  schema_search_path: 
