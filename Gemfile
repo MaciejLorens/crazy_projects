@@ -9,6 +9,7 @@ gem 'pg'
 gem 'thin'
 gem 'hirb'
 gem 'haml'
+gem 'devise'
 
 group :development do
   gem "better_errors"

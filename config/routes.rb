@@ -1,4 +1,8 @@
 CrazyProjects::Application.routes.draw do
+
+  resource :users
+  devise_for :users
+
   root :to => "home#index"
 
   match "home" => "home#index"
