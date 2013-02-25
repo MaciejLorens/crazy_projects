@@ -10,6 +10,7 @@ gem 'thin'
 gem 'hirb'
 gem 'haml'
 gem 'devise'
+gem "paperclip", "~> 3.0"
 
 group :development do
   gem "better_errors"

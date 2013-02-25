@@ -1,11 +1,12 @@
 CrazyProjects::Application.routes.draw do
 
-  resource :users
   devise_for :users
 
   root :to => "home#index"
 
   match "home" => "home#index"
+  match "users/:id" => "users#show", :as => "users"
+  match "users/:id" => "users#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
