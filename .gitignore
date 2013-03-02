@@ -17,3 +17,4 @@
 /test
 .rvmrc
 \#crazy_projects.uml
+db/schema.rb

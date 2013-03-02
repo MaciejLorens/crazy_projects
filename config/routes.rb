@@ -1,5 +1,7 @@
 CrazyProjects::Application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   resources :participants
   resources :posts
   resources :projects
