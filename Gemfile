@@ -5,12 +5,14 @@ gem 'rails', '3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
-gem 'thin'
-gem 'hirb'
-gem 'haml'
+gem "cancan"
 gem 'devise'
+gem 'haml'
+gem 'hirb'
 gem "paperclip", "~> 3.0"
+gem 'pg'
+gem 'rails_admin'
+gem 'thin'
 
 group :development do
   gem "better_errors"
