@@ -12,6 +12,10 @@ project1 = Project.create(title: "project1_name", target: "project1_target", nee
 project2 = Project.create(title: "project2_name", target: "project2_target", needs: "project2_needs", description: "project2_description")
 project3 = Project.create(title: "project3_name", target: "project3_target", needs: "project3_needs", description: "project3_description")
 
+rating1 = Rating.create(project_id: project1.id, user_id: user1.id, value: 8)
+rating1 = Rating.create(project_id: project2.id, user_id: user1.id, value: 10)
+rating1 = Rating.create(project_id: project3.id, user_id: user2.id, value: 5)
+
 participant1 = Participant.create(project_id: project1.id, user_id: user1.id, role: Participant::ROLES[:owner])
 participant2 = Participant.create(project_id: project1.id, user_id: user2.id, role: Participant::ROLES[:participant])
 participant3 = Participant.create(project_id: project2.id, user_id: user2.id, role: Participant::ROLES[:owner])
@@ -34,14 +38,10 @@ post3 = Post.create(:project_id => project1.id, :user_id => user2.id, :content =
 post4 = Post.create(:project_id => project2.id, :user_id => user1.id, :content => "post4_content")
 post5 = Post.create(:project_id => project3.id, :user_id => user1.id, :content => "post5_content")
 
-#image1 = Image.create()
-
 comment1 = Comment.create(:parent_id => nil, :external_id => post1.id, :user_id => user1.id, :type => "PostComment", :content => "comment1")
 comment2 = Comment.create(:parent_id => comment1.id, :external_id => post1.id, :user_id => user2.id, :type => "PostComment", :content => "comment2")
 comment3 = Comment.create(:parent_id => nil, :external_id => post1.id, :user_id => user1.id, :type => "PostComment", :content => "comment3")
 comment4 = Comment.create(:parent_id => nil, :external_id => post2.id, :user_id => user2.id, :type => "PostComment", :content => "comment4")
-#comment5 = Comment.create(:parent_id => nil, :external_id => post2.id, :user_id => user2.id, :type => "ImageComment", :content => "comment4")
-#comment6 = Comment.create(:parent_id => comment5.id, :external_id => post2.id, :user_id => user1.id, :type => "ImageComment", :content => "comment4")
 
 gallery1 = Gallery.create(:project_id => project1.id, :name => "gallery1")
 gallery2 = Gallery.create(:project_id => project1.id, :name => "gallery2")

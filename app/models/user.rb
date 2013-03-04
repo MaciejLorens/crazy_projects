@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :participants
   has_many :posts
   has_many :projects, :through => :participants
+  has_many :ratings
 
   def superadmin?
     role = Role.find_by_name "superadmin"

@@ -7,4 +7,9 @@ class Project < ActiveRecord::Base
   has_many :posts
   has_many :galleries
   has_many :users, :through => :participants
+  has_many :ratings
+
+  def rating
+    ratings.sum(:value)
+  end
 end
